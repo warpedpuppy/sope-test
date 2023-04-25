@@ -15,7 +15,7 @@ const express = require("express"),
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const cors = require("cors");
-app.use(cors);
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -100,8 +100,8 @@ app.get("/movies/directors/:directorName", passport.authenticate('jwt', { sessio
       res.status(500).send('Error: ' + err);
     });
 });
-
-app.get("/", passport.authenticate('jwt', { session: false }), (req, res) => {
+// passport.authenticate('jwt', { session: false }),
+app.get("/",  (req, res) => {
     res.send("Welcome to myFlix Movies!");
 });
 
