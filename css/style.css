@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Cabin+Sketch&family=Lato&family=Uncial+Antiqua&display=swap');
+
+body{
+    font-family: poppins, sans-serif;
+
+}
+thead {
+    background: Pink;
+    text-align: center;
+}
+th {background: HotPink;}
+table { width:1200px;border:5px solid Black;}
+td,th { border:1px solid Black;}
